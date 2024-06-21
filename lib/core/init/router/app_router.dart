@@ -29,10 +29,7 @@ class AppRouter {
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
         pageBuilder: (context, state, child) => customPageBuilderWidget(
-          context,
-          state,
-          BottomNavigationWidget(child: child),
-        ),
+            context, state, BottomNavigationWidget(location: state.uri.toString(), child: child)),
         routes: [
           GoRoute(
             name: RouterEnums.dashboardScreen.routeName,

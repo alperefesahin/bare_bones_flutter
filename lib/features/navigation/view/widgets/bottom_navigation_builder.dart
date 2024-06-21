@@ -4,25 +4,26 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-Widget bottomNavigationBuilder(BuildContext context) {
+Widget bottomNavigationBuilder(BuildContext context, String location) {
   return BottomNavigationBar(
+    key: ValueKey(location),
     backgroundColor: white,
     currentIndex: _calculateSelectedIndex(context),
     selectedItemColor: blue,
     onTap: (index) => _onItemTapped(index, context),
     items: const [
       BottomNavigationBarItem(
-        label: "Dashboard",
+        label: 'Dashboard',
         icon: Icon(CupertinoIcons.home, size: 31),
         activeIcon: Icon(CupertinoIcons.home, size: 31),
       ),
       BottomNavigationBarItem(
-        label: "Search",
+        label: 'Search',
         icon: Icon(CupertinoIcons.search, size: 31),
         activeIcon: Icon(CupertinoIcons.search, size: 31),
       ),
       BottomNavigationBarItem(
-        label: "Profile",
+        label: 'Profile',
         icon: Icon(CupertinoIcons.search, size: 31),
         activeIcon: Icon(CupertinoIcons.search, size: 31),
       ),
@@ -48,7 +49,7 @@ int _calculateSelectedIndex(BuildContext context) {
 void _onItemTapped(int index, BuildContext context) {
   switch (index) {
     case 0:
-      GoRouter.of(context).goNamed(RouterEnums.profileScreen.routeName);
+      GoRouter.of(context).goNamed(RouterEnums.dashboardScreen.routeName);
       break;
     case 1:
       GoRouter.of(context).goNamed(RouterEnums.searchScreen.routeName);
