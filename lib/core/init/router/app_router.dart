@@ -1,6 +1,7 @@
 import 'package:bare_bones_flutter/core/constants/enums/router_enums.dart';
 import 'package:bare_bones_flutter/core/init/router/custom_page_builder_widget.dart';
-import 'package:bare_bones_flutter/features/auth/sign_up/sign_up_view.dart';
+import 'package:bare_bones_flutter/features/auth/sign_in/view/sign_in_view.dart';
+import 'package:bare_bones_flutter/features/auth/sign_up/view/sign_up_view.dart';
 import 'package:bare_bones_flutter/features/dashboard/view/dashboard_view.dart';
 import 'package:bare_bones_flutter/features/navigation/view/bottom_navigation_view.dart';
 import 'package:bare_bones_flutter/features/profile/view/profile_view.dart';
@@ -14,7 +15,7 @@ final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>(d
 class AppRouter {
   final router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: RouterEnums.signUpScreen.routeName,
+    initialLocation: RouterEnums.signInScreen.routeName,
     routes: [
       GoRoute(
         parentNavigatorKey: _rootNavigatorKey,
@@ -24,6 +25,16 @@ class AppRouter {
           context,
           state,
           const SignUpView(),
+        ),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootNavigatorKey,
+        path: RouterEnums.signInScreen.routeName,
+        name: RouterEnums.signInScreen.routeName,
+        pageBuilder: (context, state) => customPageBuilderWidget(
+          context,
+          state,
+          const SignInView(),
         ),
       ),
       ShellRoute(
