@@ -1,3 +1,4 @@
+import 'package:bare_bones_flutter/core/design_system/colors/colors.dart';
 import 'package:bare_bones_flutter/core/design_system/components/bare_bones_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,6 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const BareBonesScaffold(body: Center(child: Text('Search')));
+    return const BareBonesScaffold(backgroundColor: green, body: Center(child: Text('Search')));
   }
 }

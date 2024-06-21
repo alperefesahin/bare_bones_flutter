@@ -14,18 +14,18 @@ Widget bottomNavigationBuilder(BuildContext context, String location) {
     items: const [
       BottomNavigationBarItem(
         label: 'Dashboard',
-        icon: Icon(CupertinoIcons.home, size: 31),
-        activeIcon: Icon(CupertinoIcons.home, size: 31),
+        icon: Icon(CupertinoIcons.home, size: 20),
+        activeIcon: Icon(CupertinoIcons.home, size: 20),
       ),
       BottomNavigationBarItem(
         label: 'Search',
-        icon: Icon(CupertinoIcons.search, size: 31),
-        activeIcon: Icon(CupertinoIcons.search, size: 31),
+        icon: Icon(CupertinoIcons.search, size: 20),
+        activeIcon: Icon(CupertinoIcons.search, size: 20),
       ),
       BottomNavigationBarItem(
         label: 'Profile',
-        icon: Icon(CupertinoIcons.search, size: 31),
-        activeIcon: Icon(CupertinoIcons.search, size: 31),
+        icon: Icon(CupertinoIcons.person, size: 20),
+        activeIcon: Icon(CupertinoIcons.person, size: 20),
       ),
     ],
   );
