@@ -33,15 +33,19 @@ dependencies:
   go_router: ^14.2.0
   get_it: ^7.7.0
   cupertino_icons: ^1.0.8
+  firebase_core: ^3.1.0
   # localization from the official documentation
   flutter_localizations:
     sdk: flutter
   intl: any
+  flutter_riverpod: ^2.5.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  custom_lint: ^0.6.4
+  riverpod_lint: ^2.3.10
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

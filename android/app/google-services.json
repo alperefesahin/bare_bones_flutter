@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "64426392035",
+    "project_id": "barebones-f11a1",
+    "storage_bucket": "barebones-f11a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64426392035:android:8f725e544c6a29588208d6",
+        "android_client_info": {
+          "package_name": "com.example.bare_bones_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6ekcC0hyx_VZ3Kts9vk_jCQhyDSwFTVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
