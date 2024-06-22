@@ -88,7 +88,7 @@ class _SignInViewState extends State<SignInView> {
                 onPressed: _isButtonDisabled
                     ? null
                     : () {
-                        // Handle login button press.
+                      context.goNamed(RouterEnums.dashboardScreen.routeName);
                       },
                 child: Text(AppLocalizations.of(context)!.signIn),
               ),
