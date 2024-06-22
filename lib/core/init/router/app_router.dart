@@ -15,7 +15,7 @@ final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>(d
 class AppRouter {
   final router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: RouterEnums.dashboardScreen.routeName,
+    initialLocation: RouterEnums.signInScreen.routeName,
     routes: [
       GoRoute(
         parentNavigatorKey: _rootNavigatorKey,
