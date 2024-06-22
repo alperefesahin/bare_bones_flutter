@@ -56,13 +56,13 @@ class _SignInViewState extends State<SignInView> {
             children: [
               TextFormField(
                 controller: _emailController,
-                decoration: InputDecoration(labelText: AppLocalizations.of(context)?.email),
+                decoration: InputDecoration(labelText: AppLocalizations.of(context)!.email),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return AppLocalizations.of(context)?.enterYourEmail;
+                    return AppLocalizations.of(context)!.enterYourEmail;
                   } else if (!RegExp(_emailPattern).hasMatch(value)) {
-                    return AppLocalizations.of(context)?.enterValidEmail;
+                    return AppLocalizations.of(context)!.enterValidEmail;
                   }
                   return null;
                 },
@@ -71,13 +71,13 @@ class _SignInViewState extends State<SignInView> {
               TextFormField(
                 controller: _passwordController,
                 decoration: InputDecoration(
-                  labelText: AppLocalizations.of(context)?.password,
+                  labelText: AppLocalizations.of(context)!.password,
                   errorMaxLines: 2,
                 ),
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return AppLocalizations.of(context)?.passwordRequired;
+                    return AppLocalizations.of(context)!.passwordRequired;
                   }
                   return null; // Password is valid.
                 },

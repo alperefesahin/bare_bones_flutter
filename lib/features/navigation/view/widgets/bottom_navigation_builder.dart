@@ -14,17 +14,17 @@ Widget bottomNavigationBuilder(BuildContext context, String location) {
     onTap: (index) => _onItemTapped(index, context),
     items: [
       BottomNavigationBarItem(
-        label: AppLocalizations.of(context)?.dashboard,
+        label: AppLocalizations.of(context)!.dashboard,
         icon: const Icon(CupertinoIcons.home, size: 20),
         activeIcon: const Icon(CupertinoIcons.home, size: 20),
       ),
       BottomNavigationBarItem(
-        label: AppLocalizations.of(context)?.search,
+        label: AppLocalizations.of(context)!.search,
         icon: const Icon(CupertinoIcons.search, size: 20),
         activeIcon: const Icon(CupertinoIcons.search, size: 20),
       ),
       BottomNavigationBarItem(
-        label: AppLocalizations.of(context)?.profile,
+        label: AppLocalizations.of(context)!.profile,
         icon: const Icon(CupertinoIcons.person, size: 20),
         activeIcon: const Icon(CupertinoIcons.person, size: 20),
       ),

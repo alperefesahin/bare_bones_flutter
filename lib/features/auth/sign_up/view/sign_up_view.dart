@@ -64,13 +64,13 @@ class _SignUpViewState extends State<SignUpView> {
             children: [
               TextFormField(
                 controller: _emailController,
-                decoration: InputDecoration(labelText: AppLocalizations.of(context)?.email),
+                decoration: InputDecoration(labelText: AppLocalizations.of(context)!.email),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return AppLocalizations.of(context)?.enterYourEmail;
+                    return AppLocalizations.of(context)!.enterYourEmail;
                   } else if (!RegExp(_emailPattern).hasMatch(value)) {
-                    return AppLocalizations.of(context)?.enterValidEmail;
+                    return AppLocalizations.of(context)!.enterValidEmail;
                   }
                   return null;
                 },
@@ -78,26 +78,26 @@ class _SignUpViewState extends State<SignUpView> {
               ),
               TextFormField(
                 controller: _passwordController,
-                decoration: InputDecoration(labelText: AppLocalizations.of(context)?.password),
+                decoration: InputDecoration(labelText: AppLocalizations.of(context)!.password),
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return AppLocalizations.of(context)?.passwordRequired;
+                    return AppLocalizations.of(context)!.passwordRequired;
                   }
                   if (value.length < 8) {
-                    return AppLocalizations.of(context)?.passwordMustBeAtLeast8CharactersLong;
+                    return AppLocalizations.of(context)!.passwordMustBeAtLeast8CharactersLong;
                   }
                   if (!value.contains(RegExp(r'[A-Z]'))) {
-                    return AppLocalizations.of(context)?.passwordMustContainAtLeastOneUppercaseLetter;
+                    return AppLocalizations.of(context)!.passwordMustContainAtLeastOneUppercaseLetter;
                   }
                   if (!value.contains(RegExp(r'[a-z]'))) {
-                    return AppLocalizations.of(context)?.passwordMustContainAtLeastOneLowercaseLetter;
+                    return AppLocalizations.of(context)!.passwordMustContainAtLeastOneLowercaseLetter;
                   }
                   if (!value.contains(RegExp(r'[0-9]'))) {
-                    return AppLocalizations.of(context)?.passwordMustContainAtLeastOneNumbericCharacter;
+                    return AppLocalizations.of(context)!.passwordMustContainAtLeastOneNumbericCharacter;
                   }
                   if (!value.contains(RegExp(r'[!@#$%^&*()<>?/|}{~:]'))) {
-                    return AppLocalizations.of(context)?.passwordMustContainAtLeastOneSpecialCharacter;
+                    return AppLocalizations.of(context)!.passwordMustContainAtLeastOneSpecialCharacter;
                   }
                   return null; // Password is valid.
                 },
@@ -105,14 +105,14 @@ class _SignUpViewState extends State<SignUpView> {
               ),
               TextFormField(
                 controller: _confirmPasswordController,
-                decoration: InputDecoration(labelText: AppLocalizations.of(context)?.confirmPassword),
+                decoration: InputDecoration(labelText: AppLocalizations.of(context)!.confirmPassword),
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return AppLocalizations.of(context)?.reEnterPassword;
+                    return AppLocalizations.of(context)!.reEnterPassword;
                   }
                   if (value != _passwordController.text) {
-                    return AppLocalizations.of(context)?.passwordsDoNotMatch;
+                    return AppLocalizations.of(context)!.passwordsDoNotMatch;
                   }
                   return null; // Passwords match.
                 },
