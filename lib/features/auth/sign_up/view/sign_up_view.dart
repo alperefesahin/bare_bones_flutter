@@ -1,6 +1,7 @@
 import 'package:bare_bones_flutter/core/design_system/components/bare_bones_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
@@ -122,7 +123,7 @@ class _SignUpViewState extends State<SignUpView> {
                 onPressed: _isButtonDisabled
                     ? null
                     : () {
-                        // Handle sign up button press
+                        context.pop();
                       },
                 child: Text(AppLocalizations.of(context)!.signUpExclamation),
               ),
