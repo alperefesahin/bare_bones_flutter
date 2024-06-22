@@ -2,6 +2,7 @@ import 'package:bare_bones_flutter/core/constants/enums/router_enums.dart';
 import 'package:bare_bones_flutter/core/design_system/components/bare_bones_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({super.key});
@@ -55,13 +56,13 @@ class _SignInViewState extends State<SignInView> {
             children: [
               TextFormField(
                 controller: _emailController,
-                decoration: const InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(labelText: AppLocalizations.of(context)?.email),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter your email';
+                    return AppLocalizations.of(context)?.enterYourEmail;
                   } else if (!RegExp(_emailPattern).hasMatch(value)) {
-                    return 'Please enter a valid email';
+                    return AppLocalizations.of(context)?.enterValidEmail;
                   }
                   return null;
                 },
@@ -69,14 +70,14 @@ class _SignInViewState extends State<SignInView> {
               ),
               TextFormField(
                 controller: _passwordController,
-                decoration: const InputDecoration(
-                  labelText: 'Password',
+                decoration: InputDecoration(
+                  labelText: AppLocalizations.of(context)?.password,
                   errorMaxLines: 2,
                 ),
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Password is required';
+                    return AppLocalizations.of(context)?.passwordRequired;
                   }
                   return null; // Password is valid.
                 },
@@ -87,18 +88,16 @@ class _SignInViewState extends State<SignInView> {
                 onPressed: _isButtonDisabled
                     ? null
                     : () {
-                        // Handle login button press
-                        // For now, print a message
-                        print('Sign In button pressed');
+                        // Handle login button press.
                       },
-                child: const Text('Sign In'),
+                child: Text(AppLocalizations.of(context)!.signIn),
               ),
               const SizedBox(height: 100),
               ElevatedButton(
                 onPressed: () {
                   context.pushNamed(RouterEnums.signUpScreen.routeName);
                 },
-                child: const Text('Sign up instead'),
+                child: Text(AppLocalizations.of(context)!.signUpInstead),
               ),
             ],
           ),

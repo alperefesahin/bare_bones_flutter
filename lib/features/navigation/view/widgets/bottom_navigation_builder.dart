@@ -3,6 +3,7 @@ import 'package:bare_bones_flutter/core/design_system/colors/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Widget bottomNavigationBuilder(BuildContext context, String location) {
   return BottomNavigationBar(
@@ -11,21 +12,21 @@ Widget bottomNavigationBuilder(BuildContext context, String location) {
     currentIndex: _calculateSelectedIndex(context),
     selectedItemColor: blue,
     onTap: (index) => _onItemTapped(index, context),
-    items: const [
+    items: [
       BottomNavigationBarItem(
-        label: 'Dashboard',
-        icon: Icon(CupertinoIcons.home, size: 20),
-        activeIcon: Icon(CupertinoIcons.home, size: 20),
+        label: AppLocalizations.of(context)?.dashboard,
+        icon: const Icon(CupertinoIcons.home, size: 20),
+        activeIcon: const Icon(CupertinoIcons.home, size: 20),
       ),
       BottomNavigationBarItem(
-        label: 'Search',
-        icon: Icon(CupertinoIcons.search, size: 20),
-        activeIcon: Icon(CupertinoIcons.search, size: 20),
+        label: AppLocalizations.of(context)?.search,
+        icon: const Icon(CupertinoIcons.search, size: 20),
+        activeIcon: const Icon(CupertinoIcons.search, size: 20),
       ),
       BottomNavigationBarItem(
-        label: 'Profile',
-        icon: Icon(CupertinoIcons.person, size: 20),
-        activeIcon: Icon(CupertinoIcons.person, size: 20),
+        label: AppLocalizations.of(context)?.profile,
+        icon: const Icon(CupertinoIcons.person, size: 20),
+        activeIcon: const Icon(CupertinoIcons.person, size: 20),
       ),
     ],
   );
