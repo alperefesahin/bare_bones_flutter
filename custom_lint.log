@@ -1,0 +1,165 @@
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 Plugin avoid_build_context_in_providers threw while analyzing /Users/sahinefe/Documents/Github/bare_bones_flutter/lib/features/auth/sign_up/viewmodel/sign_up_viewmodel.dart:
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 Unsupported operation: unknown expression "StateNotifierProvider((ref) => null)" (InstanceCreationExpressionImpl)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #0      LegacyProviderDeclaration._parse.decodeTarget (package:riverpod_analyzer_utils/src/riverpod_ast/legacy_provider_declaration.dart:141:11)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #1      LegacyProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/legacy_provider_declaration.dart:151:7)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #2      _ParseRiverpodUnitVisitor.visitVariableDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:246:51)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #3      VariableDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:18791:50)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:13022:20)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #5      VariableDeclarationListImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:18934:16)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #6      RecursiveAstVisitor.visitVariableDeclarationList (package:analyzer/dart/ast/visitor.dart:1780:10)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #7      VariableDeclarationListImpl.accept (package:analyzer/src/dart/ast/ast.dart:18928:15)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #8      TopLevelVariableDeclarationImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:17997:19)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #9      RecursiveAstVisitor.visitTopLevelVariableDeclaration (package:analyzer/dart/ast/visitor.dart:1738:10)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #10     TopLevelVariableDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:17992:15)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #11     NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:13022:20)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #12     CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3662:21)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #13     RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #14     CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3655:50)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #15     new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #16     _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 <asynchronous suspension>
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #17     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 <asynchronous suspension>
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 #18     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918 <asynchronous suspension>
+[avoid_build_context_in_providers] 2024-06-23T00:07:19.652918
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Unsupported operation: unknown expression "StateNotifierProvider((ref) => null)" (InstanceCreationExpressionImpl)
+#0      LegacyProviderDeclaration._parse.decodeTarget (package:riverpod_analyzer_utils/src/riverpod_ast/legacy_provider_declaration.dart:141:11)
+#1      LegacyProviderDeclaration._parse (package:riverpod_analyzer_utils/src/riverpod_ast/legacy_provider_declaration.dart:151:7)
+#2      _ParseRiverpodUnitVisitor.visitVariableDeclaration (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:246:51)
+#3      VariableDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:18791:50)
+#4      NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:13022:20)
+#5      VariableDeclarationListImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:18934:16)
+#6      RecursiveAstVisitor.visitVariableDeclarationList (package:analyzer/dart/ast/visitor.dart:1780:10)
+#7      VariableDeclarationListImpl.accept (package:analyzer/src/dart/ast/ast.dart:18928:15)
+#8      TopLevelVariableDeclarationImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:17997:19)
+#9      RecursiveAstVisitor.visitTopLevelVariableDeclaration (package:analyzer/dart/ast/visitor.dart:1738:10)
+#10     TopLevelVariableDeclarationImpl.accept (package:analyzer/src/dart/ast/ast.dart:17992:15)
+#11     NodeListImpl.accept (package:analyzer/src/dart/ast/ast.dart:13022:20)
+#12     CompilationUnitImpl.visitChildren (package:analyzer/src/dart/ast/ast.dart:3662:21)
+#13     RecursiveAstVisitor.visitCompilationUnit (package:analyzer/dart/ast/visitor.dart:942:10)
+#14     CompilationUnitImpl.accept (package:analyzer/src/dart/ast/ast.dart:3655:50)
+#15     new ResolvedRiverpodLibraryResult.from (package:riverpod_analyzer_utils/src/riverpod_ast/resolve_riverpod.dart:22:14)
+#16     _ParseRiverpod._setupRiverpod (package:riverpod_lint/src/riverpod_custom_lint.dart:90:50)
+<asynchronous suspension>
+#17     RiverpodLintRule.startUp (package:riverpod_lint/src/riverpod_custom_lint.dart:62:5)
+<asynchronous suspension>
+#18     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:188:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:171:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /Users/sahinefe/.pub-cache/hosted/pub.dev/firebase_auth-5.1.0/lib/src/user_credential.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:151:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:453:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:188:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:171:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /Users/sahinefe/.pub-cache/hosted/pub.dev/firebase_auth-5.1.0/lib/src/firebase_auth.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:151:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:453:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:188:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:171:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /Users/sahinefe/.pub-cache/hosted/pub.dev/firebase_auth-5.1.0/lib/src/user_credential.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:151:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:453:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:188:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:171:22)
+<asynchronous suspension>
+
+The request edit.getAssists failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:Bad state: Unable to find the context to /Users/sahinefe/.pub-cache/hosted/pub.dev/firebase_auth-5.1.0/lib/src/firebase_auth.dart
+#0      AnalysisContextCollectionImpl.contextFor (package:analyzer/src/dart/analysis/analysis_context_collection.dart:151:5)
+#1      _ClientAnalyzerPlugin.handleEditGetAssists (package:custom_lint_builder/src/client.dart:453:47)
+<asynchronous suspension>
+#2      ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:556:18)
+<asynchronous suspension>
+#3      ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:599:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:188:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:171:22)
+<asynchronous suspension>
+

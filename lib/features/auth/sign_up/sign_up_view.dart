@@ -1,16 +1,18 @@
+import 'package:bare_bones_flutter/core/design_system/components/bare_bones_loading_indicator.dart';
 import 'package:bare_bones_flutter/core/design_system/components/bare_bones_scaffold.dart';
+import 'package:bare_bones_flutter/features/auth/sign_up/sign_up_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class SignUpView extends StatefulWidget {
+class SignUpView extends ConsumerStatefulWidget {
   const SignUpView({super.key});
 
   @override
-  State<SignUpView> createState() => _SignUpViewState();
+  ConsumerState<SignUpView> createState() => _SignUpViewState();
 }
 
-class _SignUpViewState extends State<SignUpView> {
+class _SignUpViewState extends ConsumerState<SignUpView> {
   final _formKey = GlobalKey<FormState>();
 
   final String _emailPattern = r'^[^@]+@[^@]+\.[^@]+$';
@@ -47,6 +49,15 @@ class _SignUpViewState extends State<SignUpView> {
 
   @override
   Widget build(BuildContext context) {
+    ref.listen(signUpViewModelProvider, (p, c) {
+      if (p?.isLoading == false && c.isLoading == true) {
+        BareBonesLoadingIndicator.of(context).show();
+      }
+      if (p?.isLoading == true && c.isLoading == false) {
+        BareBonesLoadingIndicator.of(context).hide();
+      }
+    });
+
     return BareBonesScaffold(
       appBar: AppBar(
         title: Text(
@@ -123,7 +134,8 @@ class _SignUpViewState extends State<SignUpView> {
                 onPressed: _isButtonDisabled
                     ? null
                     : () {
-                        context.pop();
+                        ref.read(signUpViewModelProvider.notifier).createUserWithEmailAndPassword(
+                            email: _emailController.text, password: _passwordController.text);
                       },
                 child: Text(AppLocalizations.of(context)!.signUpExclamation),
               ),
