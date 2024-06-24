@@ -1,9 +1,8 @@
-import 'package:bare_bones_flutter/core/design_system/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class BareBonesLoadingIndicator {
-  BuildContext _context;
+  final BuildContext _context;
 
   void hide() {
     _context.pop();
@@ -30,23 +29,15 @@ class LoadingIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Container(
       decoration: const BoxDecoration(color: Color.fromRGBO(0, 0, 0, 0.1)),
       child: Center(
         child: Stack(
           children: [
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: black.withOpacity(0.25),
-                  borderRadius: BorderRadius.circular(16.0),
-                ),
-              ),
-            ),
-            const Center(child: CircularProgressIndicator())
+            Align(child: SizedBox(height: size.height, width: size.width)),
+            const Center(child: CircularProgressIndicator()),
           ],
         ),
       ),

@@ -1,6 +1,6 @@
 import 'package:bare_bones_flutter/core/design_system/components/bare_bones_loading_indicator.dart';
 import 'package:bare_bones_flutter/core/design_system/components/bare_bones_scaffold.dart';
-import 'package:bare_bones_flutter/features/auth/sign_up/sign_up_view_model.dart';
+import 'package:bare_bones_flutter/features/auth/auth_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -49,7 +49,7 @@ class _SignUpViewState extends ConsumerState<SignUpView> {
 
   @override
   Widget build(BuildContext context) {
-    ref.listen(signUpViewModelProvider, (p, c) {
+    ref.listen(authViewModelProvider, (p, c) {
       if (p?.isLoading == false && c.isLoading == true) {
         BareBonesLoadingIndicator.of(context).show();
       }
@@ -134,7 +134,7 @@ class _SignUpViewState extends ConsumerState<SignUpView> {
                 onPressed: _isButtonDisabled
                     ? null
                     : () {
-                        ref.read(signUpViewModelProvider.notifier).createUserWithEmailAndPassword(
+                        ref.read(authViewModelProvider.notifier).createUserWithEmailAndPassword(
                             email: _emailController.text, password: _passwordController.text);
                       },
                 child: Text(AppLocalizations.of(context)!.signUpExclamation),

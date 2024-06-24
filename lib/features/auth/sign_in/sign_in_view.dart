@@ -1,17 +1,20 @@
 import 'package:bare_bones_flutter/core/constants/enums/router_enums.dart';
+import 'package:bare_bones_flutter/core/design_system/components/bare_bones_loading_indicator.dart';
 import 'package:bare_bones_flutter/core/design_system/components/bare_bones_scaffold.dart';
+import 'package:bare_bones_flutter/features/auth/auth_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class SignInView extends StatefulWidget {
+class SignInView extends ConsumerStatefulWidget {
   const SignInView({super.key});
 
   @override
-  State<SignInView> createState() => _SignInViewState();
+  ConsumerState<SignInView> createState() => _SignInViewState();
 }
 
-class _SignInViewState extends State<SignInView> {
+class _SignInViewState extends ConsumerState<SignInView> {
   final _formKey = GlobalKey<FormState>();
   final String _emailPattern = r'^[^@]+@[^@]+\.[^@]+$';
 
@@ -45,6 +48,18 @@ class _SignInViewState extends State<SignInView> {
 
   @override
   Widget build(BuildContext context) {
+    ref.listen(authViewModelProvider, (p, c) {
+      if (p?.isLoading == false && c.isLoading == true) {
+        BareBonesLoadingIndicator.of(context).show();
+      }
+      if (p?.isLoading == true && c.isLoading == false) {
+        BareBonesLoadingIndicator.of(context).hide();
+      }
+      if (p?.isLoggedIn == false && c.isLoggedIn == true) {
+        context.goNamed(RouterEnums.dashboardScreen.routeName);
+      }
+    });
+
     return BareBonesScaffold(
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -88,7 +103,8 @@ class _SignInViewState extends State<SignInView> {
                 onPressed: _isButtonDisabled
                     ? null
                     : () {
-                      context.goNamed(RouterEnums.dashboardScreen.routeName);
+                        ref.read(authViewModelProvider.notifier).signInWithEmailAndPassword(
+                            email: _emailController.text, password: _passwordController.text);
                       },
                 child: Text(AppLocalizations.of(context)!.signIn),
               ),

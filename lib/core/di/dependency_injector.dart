@@ -6,6 +6,6 @@ final getIt = GetIt.instance;
 
 void injectionSetup() {
   // We call AppRouter for once and register it as a singleton.
+  getIt.registerSingleton<FirebaseAuth>(FirebaseAuth.instance);
   getIt.registerFactory(() => AppRouter());
-  getIt.registerFactory(() => FirebaseAuth.instance);
 }

@@ -1,11 +1,11 @@
 import 'package:bare_bones_flutter/core/constants/enums/router_enums.dart';
 import 'package:bare_bones_flutter/core/init/router/custom_page_builder_widget.dart';
-import 'package:bare_bones_flutter/features/auth/sign_in/view/sign_in_view.dart';
+import 'package:bare_bones_flutter/features/auth/sign_in/sign_in_view.dart';
 import 'package:bare_bones_flutter/features/auth/sign_up/sign_up_view.dart';
-import 'package:bare_bones_flutter/features/dashboard/view/dashboard_view.dart';
-import 'package:bare_bones_flutter/features/navigation/view/bottom_navigation_view.dart';
-import 'package:bare_bones_flutter/features/profile/view/profile_view.dart';
-import 'package:bare_bones_flutter/features/search/view/search_view.dart';
+import 'package:bare_bones_flutter/features/dashboard/dashboard_view.dart';
+import 'package:bare_bones_flutter/features/navigation/bottom_navigation_view.dart';
+import 'package:bare_bones_flutter/features/profile/profile_view.dart';
+import 'package:bare_bones_flutter/features/search/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

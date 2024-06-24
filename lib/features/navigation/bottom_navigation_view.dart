@@ -1,5 +1,5 @@
 import 'package:bare_bones_flutter/core/design_system/components/bare_bones_scaffold.dart';
-import 'package:bare_bones_flutter/features/navigation/view/widgets/bottom_navigation_builder.dart';
+import 'package:bare_bones_flutter/features/navigation/widgets/bottom_navigation_builder.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigationWidget extends StatelessWidget {
