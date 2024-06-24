@@ -13,16 +13,11 @@ A Flutter project that serves as a template with essential features for building
   - Functional Sign In, Sign Out, and Sign Up using Firebase.
   - Built on top of the main branch's features.
   - Incorporates `Riverpod` for state management.
-- **Firebase Integration (firebase-bloc branch)**:
-  - Functional Sign In, Sign Out, and Sign Up using Firebase.
-  - Built on top of the main branch's features.
-  - Incorporates `BLoC` for state management.
 
 ## Branches
 
 - **main**: Contains the basic template with the features listed above. No state management or ViewModel.
 - **firebase-riverpod**: Builds on the main branch with Firebase integration (using Riverpod) and additional functionalities for user authentication.
-- **firebase-bloc**: Builds on the main branch with Firebase integration (using BLoC) and additional functionalities for user authentication.
 
 ## Getting Started
 
