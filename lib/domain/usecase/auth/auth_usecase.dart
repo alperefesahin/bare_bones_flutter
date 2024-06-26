@@ -15,7 +15,8 @@ class AuthUseCase {
         uid: userCredential.user!.uid,
         // and much more data
       );
-      return Future(() => userModel);
+
+      return userModel;
     } else {
       throw Exception('User not created');
     }
@@ -30,7 +31,7 @@ class AuthUseCase {
         uid: userCredential.user!.uid,
         // token etc.
       );
-      return Future(() => userModel);
+      return userModel;
     } else {
       throw Exception('User not signed in');
     }
