@@ -1,6 +1,13 @@
 # bare_bones_flutter
 
+
+![x](https://github.com/matanlurey/mansion/assets/67283777/a16ab1c4-671a-4832-9c9e-da2a13a39c91)
+
 A Flutter project that serves as a template with essential features for building a robust mobile application.
+
+YouTube Video: https://youtu.be/t7Ama0flQrY
+
+Medium Article: https://medium.com/@alperefesahin/jumpstart-your-flutter-development-with-bare-bones-flutter-a6592fda9d84
 
 ## Features
 
